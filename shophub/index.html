@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopHub - Catalogue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Shop<span>Hub</span></h1>
+    <input type="text" id="searchInput" placeholder="Search for products...">
+    <div class="account-icon" onclick="toggleLoginModal()">👤</div>
+    <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+  </header>
+
+  <main>
+    <div id="product-list" class="product-list"></div>
+  </main>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+      <span class="close" onclick="toggleCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <h3 id="cart-total">Total: ₹0</h3>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="cart-modal">
+    <div class="cart-content">
+      <span class="close" onclick="toggleLoginModal()">&times;</span>
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p>New user? <span onclick="showRegister()">Register here</span></p>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="cart-modal">
+    <div class="cart-content">
+      <span class="close" onclick="toggleRegisterModal()">&times;</span>
+      <h2>Register</h2>
+      <input type="text" id="regUsername" placeholder="Username">
+      <input type="password" id="regPassword" placeholder="Password">
+      <button onclick="register()">Register</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
