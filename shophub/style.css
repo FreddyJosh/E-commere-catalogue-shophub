@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
-  background: #f7f7f7;
+  background-image: url("bg.jpg");
 }
 
 header {
@@ -10,23 +10,25 @@ header {
   align-items: center;
   background: #2874f0;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 20px;
 }
 
 header h1 span {
-  color: #ffcc00;
+  color: #ffdb4d;
 }
 
 header input {
   width: 40%;
-  padding: 5px;
+  padding: 8px 12px;
   border-radius: 4px;
   border: none;
+  outline: none;
 }
 
 .cart-icon, .account-icon {
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 12px;
+  font-size: 20px;
 }
 
 .product-list {
@@ -38,35 +40,47 @@ header input {
 
 .card {
   background: #fff;
-  margin: 10px;
-  padding: 10px;
+  margin: 12px;
+  padding: 12px;
   width: 200px;
-  border-radius: 5px;
+  border-radius: 6px;
   text-align: center;
-  box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card img {
   width: 100%;
-  height: 150px;
+  height: 160px;
   object-fit: contain;
 }
 
 .card button {
-  background: #2874f0;
-  color: #fff;
+  background: #ff9f00;
   border: none;
-  padding: 5px 10px;
+  width: 100%;
+  padding: 8px;
+  color: #fff;
+  font-weight: bold;
   cursor: pointer;
-  margin-top: 5px;
   border-radius: 4px;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #fb8c00;
 }
 
 .cart-modal {
   display: none;
   position: fixed;
-  top:0; left:0; right:0; bottom:0;
-  background: rgba(0,0,0,0.5);
+  inset: 0;
+  background: rgba(0,0,0,0.6);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -75,37 +89,116 @@ header input {
 .cart-content {
   background: #fff;
   padding: 20px;
-  width: 90%;
+  width: 95%;
   max-width: 500px;
-  border-radius: 5px;
+  border-radius: 8px;
   position: relative;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .cart-content .close {
   position: absolute;
-  top:5px;
-  right:10px;
+  top:10px;
+  right:15px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .cart-item {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .cart-item img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+  width: 60px;
+  height: 60px;
 }
 
 .cart-item .details {
   flex: 1;
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 .cart-item .qty button {
-  margin: 0 5px;
+  background: #2874f0;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #fb641b;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+#checkout-btn:hover {
+  background: #d95715;
+}
+
+.cart-content input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+
+main {
+  padding: 20px;
+}
+
+main h2 {
+  margin-bottom: 10px;
+}
+
+#prodName,
+#prodPrice,
+#prodImage {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  margin: 8px 0;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  font-family: inherit;
+}
+
+main button {
+  background: #2874f0;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+main button:hover {
+  background: #1f5ec9;
+}
+
+#existing-products {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
